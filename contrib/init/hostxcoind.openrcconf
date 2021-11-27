@@ -1,0 +1,26 @@
+# /etc/conf.d/hostxcoind: config file for /etc/init.d/hostxcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/hostxcoin/hostxcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/hostxcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/hostxcoind.pid"
+
+# Where to write hostxcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/hostxcoind"
+
+# User and group to own hostxcoind process
+#BITCOIND_USER="hostxcoin"
+#BITCOIND_GROUP="hostxcoin"
+
+# Path to hostxcoind executable
+#BITCOIND_BIN="/usr/bin/hostxcoind"
+
+# Nice value to run hostxcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

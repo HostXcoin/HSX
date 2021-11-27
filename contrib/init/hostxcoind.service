@@ -1,0 +1,26 @@
+[Unit]
+Description=HostxCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=hostxcoin
+Group=hostxcoin
+
+Type=forking
+PIDFile=/var/lib/hostxcoind/hostxcoind.pid
+
+ExecStart=/usr/bin/hostxcoind -daemon -pid=/var/lib/hostxcoind/hostxcoind.pid \
+          -conf=/etc/hostxcoin/hostxcoin.conf -datadir=/var/lib/hostxcoind
+
+ExecStop=-/usr/bin/hostxcoin-cli -conf=/etc/hostxcoin/hostxcoin.conf \
+         -datadir=/var/lib/hostxcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

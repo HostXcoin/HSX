@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=HostxCoin
+Comment=HostxCoin P2P Cryptocurrency
+Comment[fr]=HostxCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=HostxCoin, eşten eşe kriptografik sanal para birimi
+Exec=hostxcoin-qt %u
+Terminal=false
+Type=Application
+Icon=hostxcoin128
+MimeType=x-scheme-handler/hostxcoin;
+Categories=Office;Finance;
